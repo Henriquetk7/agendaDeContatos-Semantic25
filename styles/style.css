@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Mona Sans", sans-serif;
+    background-color: #f6f6f6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bi {
+    color: #151515;
+}
+
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+    border-bottom: 1px solid #c5c5c5;
+    padding-bottom: 16px;
+}
+
+.title {
+    font-weight: 300;
+    font-size: 28px;
+}
+
+.chamada_recente {
+    font-size: 14px;
+    color: #043bdf;
+}
+
+.sub_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.total_contacts {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.apagar_todos {
+    font-size: 14px;
+    color: #df0404;
+}
+
+.apagar_todos:hover {
+    opacity: 0.7;
+}
+
+.message_alert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.message_alert img {
+    margin-top: 24px;
+    width: 280px;
+}
+
+.message_alert p {
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+
+.bi-phone {
+    color: #f6f6f6;
+    width: 20px;
+    height: 20px;
+    transition: color 0.3s;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    background-color: #151515;
+    padding: 16px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 1px solid #151515;
+}
+
+.btn:hover .bi-phone {
+    color: #151515;
+}
+
+.list {
+    width: 100%;
+    margin-top: 24px;
+    list-style: none;
+}
+
+.list_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 14px;
+    border-radius: 50px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 16px;
+}
+
+.person_name {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.perfil_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+}
+
+.bi-person {
+    color: #c7c7c7;
+}
+
+.contact_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.phone_number {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #e0e0e04f;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    padding: 8px 12px;
+}
+
+.actions_icons {
+    display: flex;
+    align-items: center;
+    transition: .4s;
+}
+
+.actions_icons:hover {
+    opacity: 0.5;
+}
+
+.bi-trash {
+    color: #df0404;
+}
+
+@media (max-width: 1250px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}

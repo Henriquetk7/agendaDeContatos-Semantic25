@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mona Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 24px;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+label {
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.title {
+    font-weight: 300;
+    font-size: 28px;
+}
+
+.message_alert {
+    margin-top: 24px;
+}
+
+.perfil_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 50%;
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    margin-top: 24px;
+}
+
+.bi-person {
+    width: 40px;
+    height: 40px;
+    color: #c7c7c7;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.textarea {
+    padding: 16px;
+    resize: none;
+    height: 80px;
+    border-radius: 25px;
+    border: 1px solid #e0e0e0;
+}
+
+.input {
+    padding: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 40px;
+}
+
+.require_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 20px;
+    margin-top: 24px;
+}
+
+.require_input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+
+
+.btn {
+    font-family: "Mora Sans", sans-serif;
+    background-color: #151515;
+    color: #f6f6f6;
+    padding: 12px;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 50px;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 1px solid #151515;
+    color: inherit;
+}
+
+
+
+@media (max-width: 1250px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
