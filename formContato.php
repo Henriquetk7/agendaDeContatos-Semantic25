@@ -9,14 +9,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $empresa = $_POST["empresa"];
     $observacao = $_POST["observacao"];
+    $id_tipo_contato = $_POST["id_tipo_contato"];
 
     //UPDATE
     if (isset($_POST["id_contato"])) {
         $id_contato = $_POST["id_contato"];
-        $sql = "UPDATE contatos SET nome='$nome', telefone='$telefone', email='$email', empresa='$empresa', observacao='$observacao' WHERE id_contato=$id_contato";
+        $sql ="UPDATE contatos SET nome='$nome', telefone='$telefone', email='$email', empresa='$empresa',                      observacao='$observacao', id_tipo_contato=$id_tipo_contato 
+        WHERE id_contato=$id_contato";
     } else {
         //CREATE
-        $sql = "INSERT INTO contatos (nome, telefone, email, empresa, observacao) VALUES ('$nome', '$telefone', '$email', '$empresa', '$observacao')";
+        $sql = "INSERT INTO contatos (nome, telefone, email, empresa, observacao, id_tipo_contato ) VALUES ('$nome', '$telefone', '$email', '$empresa', '$observacao', '$id_tipo_contato')";
     }
     $conn->query($sql);
     header("Location: index.php");
@@ -34,6 +36,8 @@ if (isset($_GET["edit"])) {
         $editar_contato = $res->fetch_assoc(); //fetch_assoc() retorna um array associativo
     }
 }
+
+$tipos_result = $conn->query("SELECT * FROM tipo_contato");
 
 ?>
 
@@ -104,6 +108,16 @@ if (isset($_GET["edit"])) {
             <label for=empresa>Empresa</label>
             <input class="input" type="text" name="empresa" placeholder="Nome da empresa" value="<?= $editar_contato['empresa'] ?? '' ?>">
 
+            <label for="id_tipo_contato">Tipo de contato</label>
+            <select name="id_tipo_contato" class="input" required>
+                <option value="">Selecione...</option>
+                    <?php while ($tipo = $tipos_result->fetch_assoc()): ?>
+                    <option value="<?= $tipo['id'] ?>" <?= isset($editar_contato['id_tipo_contato']) && $editar_contato['id_tipo_contato'] == $tipo['id'] ? 'selected' : '' ?>>
+                    <?= htmlspecialchars($tipo['descricao']) ?>
+                </option>
+                <?php endwhile; ?>
+            </select>
+
             <label for=observacao>Observação</label>
             <textarea class="textarea" name="observacao" placeholder=""><?= $editar_contato['observacao'] ?? '' ?></textarea>
 
@@ -112,8 +126,6 @@ if (isset($_GET["edit"])) {
             <?php endif; ?>
             <button class="btn" type="submit"><?= $editar_contato ? 'Atualizar' : 'Salvar' ?></button>
         </form>
-
-
     </div>
 
     <?php $conn->close(); ?>

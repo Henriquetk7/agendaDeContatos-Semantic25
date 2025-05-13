@@ -6,8 +6,6 @@
 }
 
 body {
-    display: flex;
-    align-items: center;
     background-color: #f6f6f6;
     padding: 24px;
     height: 100vh;
@@ -26,8 +24,8 @@ label {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: fit-content;
     margin: 0 auto;
+    width: 30%;
 }
 
 .header {
@@ -41,9 +39,6 @@ label {
     font-size: 28px;
 }
 
-.message_alert {
-    margin-top: 24px;
-}
 
 .perfil_icon {
     display: flex;
@@ -67,9 +62,8 @@ label {
 .form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
     margin-top: 16px;
-    width: 100%;
 }
 
 .textarea {
@@ -81,7 +75,7 @@ label {
 }
 
 .input {
-    padding: 16px;
+    padding: 12px;
     border: 2px solid #e0e0e0;
     border-radius: 40px;
 }
@@ -90,7 +84,7 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     border-radius: 20px;
     margin-top: 24px;
 }
@@ -99,10 +93,16 @@ label {
     display: flex;
     flex-direction: column;
     width: 100%;
-
 }
 
+.require_input label{
+    margin-bottom: 4px;
+}
 
+.optional_input{
+    display: flex;
+    flex-direction: column;
+}
 
 .btn {
     font-family: "Mora Sans", sans-serif;
