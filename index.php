@@ -2,7 +2,16 @@
 
 <?php
 //READ
-$result = $conn->query("SELECT * FROM contatos ORDER BY nome ASC");
+$result = $conn->query("SELECT 
+  c.id_contato,
+  c.nome,
+  c.telefone,
+  t.descricao AS tipo_contato
+FROM 
+  contatos c
+INNER JOIN 
+  tipo_contato t ON c.id_tipo_contato = t.id
+ORDER BY c.nome ASC");
 
 
 
