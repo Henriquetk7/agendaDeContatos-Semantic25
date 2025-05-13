@@ -130,6 +130,7 @@ a {
     margin-bottom: 16px;
 }
 
+
 .person_name {
     display: flex;
     align-items: center;
@@ -149,14 +150,31 @@ a {
     color: #c7c7c7;
 }
 
+
+.container_contact{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
 .contact_info {
     display: flex;
     flex-direction: column;
+    gap: 4px;
 }
 
 .phone_number {
-    font-size: 12px;
+    font-size: 16px;
     opacity: 0.7;
+}
+
+.contact_type{
+    text-align: center;
+    font-size: 10px;
+    background-color: #8dc6ff74;
+    border-radius: 16px;
+    max-width: fit-content;
+    padding: 0 8px 0 8px;
 }
 
 .actions {

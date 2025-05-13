@@ -99,10 +99,10 @@ label {
     margin-bottom: 4px;
 }
 
-.optional_input{
-    display: flex;
-    flex-direction: column;
+.select{
+    color: #808080;
 }
+
 
 .btn {
     font-family: "Mora Sans", sans-serif;

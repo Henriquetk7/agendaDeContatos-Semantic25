@@ -106,10 +106,10 @@ $tipos_result = $conn->query("SELECT * FROM tipo_contato");
             <input class="input" type="email" name="email" placeholder="exemplo@email.com" value="<?= $editar_contato['email'] ?? '' ?>">
 
             <label for=empresa>Empresa</label>
-            <input class="input" type="text" name="empresa" placeholder="Nome da empresa" value="<?= $editar_contato['empresa'] ?? '' ?>">
+            <input class="input" type="text" name="empresa" placeholder="Nome da empresa" value="<?= $editar_contato            ['empresa'] ?? '' ?>">
 
             <label for="id_tipo_contato">Tipo de contato</label>
-            <select name="id_tipo_contato" class="input" required>
+            <select name="id_tipo_contato" class="input select" required>
                 <option value="">Selecione...</option>
                     <?php while ($tipo = $tipos_result->fetch_assoc()): ?>
                     <option value="<?= $tipo['id'] ?>" <?= isset($editar_contato['id_tipo_contato']) && $editar_contato['id_tipo_contato'] == $tipo['id'] ? 'selected' : '' ?>>
